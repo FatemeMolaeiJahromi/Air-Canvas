@@ -29,7 +29,6 @@ clear_timer = 0
 
 
 def render_ui(img, current_color, current_brush_size, fps):
-    """رسم نوار ابزار مدرن با ظاهر Glassmorphism و نمایشگر زنده وضعیت"""
     header_h = 85
     box_w = WIDTH // len(PALETTE)
     sub_overlay = img[0:header_h, 0:WIDTH].copy()
@@ -81,7 +80,6 @@ while True:
     lm_list = detector.find_position(img)
 
     if len(lm_list) != 0:
-        # نوک اشاره (8)، شست (4)، میانی (12)
         x1, y1 = lm_list[8][1], lm_list[8][2]
         x2, y2 = lm_list[12][1], lm_list[12][2]
         x0, y0 = lm_list[4][1], lm_list[4][2]
